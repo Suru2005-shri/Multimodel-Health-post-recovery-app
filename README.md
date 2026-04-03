@@ -135,7 +135,7 @@ This project is licensed under the MIT License.
 
 👨‍💻 Author
 
-Shruti Shrivastava  &  
+Shruti Shrivastava   
 Shubham Yadav
 
 ---
