@@ -1,64 +1,72 @@
-# Health Recovery AI — Project Structure
 
-## Frontend (React)
-```
-src/
-├── App.jsx                          # Root router (login→profile→dashboard)
-├── index.jsx                        # ReactDOM entry point
-├── styles/
-│   └── globals.css                  # Animations, fonts, scrollbars
-├── constants/
-│   ├── theme.js                     # Design tokens (colors, surfaces)
-│   └── patients.js                  # Static patient/doctor DB
-├── utils/
-│   ├── auth.js                      # Hash, strength, registry, validate
-│   ├── mlModel.js                   # JS port of trained RF+GBR models
-│   └── sensorGenerator.js           # Sensor stream + image analysis sim
-├── hooks/
-│   └── useSimulation.js             # Sensor loop, ML, alerts, 3-hr reports
-├── components/
-│   ├── ui/                          # Atomic primitives
-│   │   ├── Btn.jsx
-│   │   ├── Card.jsx
-│   │   ├── RiskBadge.jsx
-│   │   ├── RecoveryRing.jsx
-│   │   ├── SectionTitle.jsx
-│   │   ├── LiveDot.jsx
-│   │   ├── Spinner.jsx
-│   │   └── index.js                 # Barrel exports
-│   ├── Smartwatch.jsx               # Animated SVG watch
-│   ├── AlertModal.jsx               # High-risk popup
-│   ├── ImageAnalysisModal.jsx       # Upload + AI analysis
-│   ├── ReportPanel.jsx              # Slide-in notifications panel
-│   ├── LeftPanel.jsx                # 30% sidebar
-│   └── TopNav.jsx                   # Sticky header
-└── pages/
-    ├── LoginPage.jsx                # Auth (sign in/up/forgot)
-    ├── ProfileSetupPage.jsx         # Medical profile onboarding
-    └── Dashboard/
-        ├── DashboardPage.jsx        # Shell: tabs + modals
-        ├── PatientTab.jsx           # Patient view
-        ├── DoctorTab.jsx            # Doctor monitoring view
-        ├── SystemTab.jsx            # Pipeline + ML details
-        └── ReportsTab.jsx           # Auto-reports + image reports
 
-## Backend (Python)
-├── app.py           # Flask REST API (15 endpoints)
-├── train_models.py  # ML training pipeline (4 models)
-├── scheduler.py     # 3-hour report cron runner
-└── requirements.txt
+SuruAI – Intelligent Health Recovery Agent System
 
-## Quick Start
-npm install && npm start          # React frontend
-pip install -r requirements.txt   # Python deps
-python train_models.py            # Train ML models
-python app.py                     # Flask API
-python scheduler.py               # Report scheduler
-```
+From Data to Recovery — AI that Understands, Predicts, and Protects.
 
-## Demo Credentials
-| Email | Password | Role |
-|-------|----------|------|
-| rajesh@patient.com | Patient@123 | Patient (58yr, DM+HTN) |
-| priya@patient.com  | Patient@123 | Patient (45yr, healthy) |
-| doctor@health.ai   | Doctor@123  | Doctor |
+SuruAI is an AI-powered health recovery system that leverages real-time wearable data and a multi-agent architecture to monitor patient health, predict risks, and generate personalized recovery strategies.
+
+Unlike traditional health tracking applications, SuruAI focuses on **adaptive recovery intelligence**—continuously learning from user data to improve decision-making and health outcomes over time.
+
+Features
+*Real-Time Monitoring**
+  Collects health data from wearable devices (heart rate, activity, sleep, etc.)
+
+*Multi-Agent Architecture**
+
+  * **Monitor Agent** → Collects and streams real-time data
+  * **Analyzer Agent** → Detects patterns and anomalies
+  * **Predictor Agent** → Forecasts potential health risks
+  * **Recovery Agent** → Suggests personalized recovery actions
+
+AI-Driven Insights**
+  Intelligent analysis of health trends and behavioral patterns
+
+Adaptive Learning System**
+  Improves recommendations based on past outcomes
+*Early Risk Detection**
+  Identifies potential health issues before they become critical
+ System Architecture
+
+SuruAI follows a **multi-agent collaborative system**, where each agent performs a specialized role while sharing insights with others to improve overall system intelligence.
+
+Wearable Data → Monitor Agent → Analyzer → Predictor → Recovery Agent → User Feedback → Learning Loop
+ Tech Stack
+Frontend: (e.g., Flutter / React)
+Backend: Python (FastAPI / Flask)
+AI/ML: Scikit-learn / TensorFlow / PyTorch
+Data Processing: Pandas, NumPy
+Integration: Wearable APIs (Smartwatch data)
+Problem Statement
+
+Traditional healthcare systems are reactive—they respond only after a problem occurs.
+There is a lack of systems that continuously monitor, learn, and guide users during recovery.
+ Solution
+
+SuruAI introduces a **proactive AI-driven recovery system** that:
+
+* Continuously monitors health data
+* Predicts potential risks
+* Provides personalized recovery recommendations
+* Learns and improves over time
+
+Impact
+Improves patient recovery outcomes
+Enables early intervention
+Reduces risk of critical health events
+Personalized healthcare experience
+
+ Future Scope
+
+* Integration with hospital systems
+* Advanced deep learning models
+* Real-time alert system for doctors
+* Mental health & lifestyle tracking expansion
+
+
+![qw3](https://github.com/user-attachments/assets/2b1842b6-4491-4e8c-9641-687866e55a46)
+![qw2](https://github.com/user-attachments/assets/f93da841-f1e9-44e0-b8f4-0f91360ff4cc)
+![qw](https://github.com/user-attachments/assets/da781410-2935-4a03-bebb-223a543e54e1)
+
+
+
